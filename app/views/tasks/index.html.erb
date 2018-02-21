@@ -1,0 +1,17 @@
+<h1> All Tasks </h1>
+
+<style>
+  body {background-color: #FFF;}
+  li {text-decoration: none;}
+</style>
+
+<div class="container">
+<% @tasks.each do |t| %>
+<ul>
+  <li>
+    <%= link_to t.title t.details tasks_path %>
+    <input type="checkbox">
+    <% end %>
+  </li>
+</ul>
+</div> 
